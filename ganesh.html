@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <title>Credit Card Design</title>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .container{
+            min-height: 100vh;
+            width: 100%;
+            background: hwb(239 37% 10%) url(images/aa.jpg) ;
+            border-image-repeat:unset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            width: 800px;
+            height: 550px;
+            color: #fff;
+            cursor: pointer;
+            perspective: 1000px;
+        }
+        .card-inner{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 10s;
+            transform-style: preserve-3d;
+        }
+        .front, .back{
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(45deg, #24173c, #21162e) ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            z-index: 1;
+            backface-visibility: hidden;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .map-img{
+            width: 100%;
+            height: 800PX;
+            position: absolute;
+            align-items: center;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        .card-name{
+            color: rgb(229, 226, 5);
+            font-size: 50px;
+            margin-top: 5px;
+        }
+        .name{
+            color: chocolate;
+            font-size: 30px;
+            margin-top: 40px;
+        }
+        .card-text P{
+            color: rgb(20, 227, 9);
+            font-size: 25PX;
+        }
+        .back{
+            transform: rotateY(180deg);
+        }
+        .card:hover .card-inner{
+            transform: rotateY(-180deg); 
+        }    
+    </style>
+        <body>
+            <audio src="audio/Deva Shree Ganesha - Agneepath ! Ganpati Song.mp3" autoplay controls></audio>
+            <div class="container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="images/ganesh.png" class="map-img">
+                            <div class="row card-name">
+                                <p><b>HAPPY</b></p>
+                                <p><b>GANESH</b></p>
+                                <p><b>CHATHURTHI</b></p>
+                            </div> 
+                                 <div class="row name">
+                                    <p><b>PAVAN S MADDI</b></p>
+                                    <P><b>19 ~ 8 ~ 23</b></P>
+                                 </div>
+                        </div>
+                                <div class="back">
+                                    <img src="images/gG.png" class="map-img">
+                                    <div class="bar"></div>
+                                    <div class="row card-text">
+                                        <p>The name Ganesha is a Sanskrit compound, joining the words gana (gaṇa), meaning a 'group, multitude, or categorical system' and isha (īśa), meaning 'lord or master'.</p>
+                                    </div>
+                                   
+                                </div>
+                     </div>
+                </div>
+         </div>
+</body>
+</html>
